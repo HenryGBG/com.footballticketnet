@@ -10,7 +10,7 @@
 	<test name="Run on CHROME">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.fnt.TC_01_Check_Copyright" />
+			<class name="com.fnt.testScript" />
 		</classes>
 	</test>
 

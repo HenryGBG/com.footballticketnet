@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
 import commons.GlobalConstants;
+import pageUIs.com.footballticketnet.CheckoutPageUI;
 import pageUIs.com.footballticketnet.HomePageUIs;
 
 public class HomePageObject extends BasePage {
@@ -122,6 +123,30 @@ public class HomePageObject extends BasePage {
 	public void selectCountrySpanish() {
 		waitForAllElementVisible(driver, HomePageUIs.SELECTED_COUNTRY_SPANNISH);
 		clickToElement(driver, HomePageUIs.SELECTED_COUNTRY_SPANNISH);
+	}
+
+	public void searchUpcomingMatch(String searchValue) {
+		waitForElementVisible(driver, HomePageUIs.SEARCH_TEXTBOX_XPATH);
+		sendkeyToElement(driver, HomePageUIs.SEARCH_TEXTBOX_XPATH, searchValue);
+	}
+
+	public void clickOnSearchResult(String searchResult) {
+		waitForElementVisible(driver, HomePageUIs.SEARCH_RESULT_ITEM, searchResult);
+		clickToElement(driver, HomePageUIs.SEARCH_RESULT_ITEM, searchResult);
+	}
+
+	public void openChooseCategory() {
+		waitForElementVisible(driver, HomePageUIs.CHOOSE_CATEGORY_DROPDOWN_XPATH);
+		clickToElement(driver, HomePageUIs.CHOOSE_CATEGORY_DROPDOWN_XPATH);
+	}
+
+	public void chooseCategoryByItem(String itemCategory) {
+		clickToElementByJS(driver, HomePageUIs.CHOOSE_CATEGORY_ITEM, itemCategory);
+	}
+
+	public void clickToResetButton() {
+		waitForElementVisible(driver, HomePageUIs.RESET_BUTTON);
+		clickToElement(driver, HomePageUIs.RESET_BUTTON);
 	}
 
 }

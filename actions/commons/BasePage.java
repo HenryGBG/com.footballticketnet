@@ -664,17 +664,14 @@ public class BasePage {
 	public boolean isProductNameSortByASCLambda(WebDriver driver, String locatorType) {
 		List<WebElement> elementLists = getListWebElement(driver, locatorType);
 		List<String> names = elementLists.stream().map(n -> n.getText()).collect(Collectors.toList());
-
 		for (String name : names) {
 			System.out.println("Product name on UI: " + name);
 		}
 		List<String> sortedNames = new ArrayList<String>(names);
 		Collections.sort(sortedNames);
-
 		for (String sortedName : sortedNames) {
 			System.out.println("Product name sau khi Sort: " + sortedName);
 		}
-
 		return names.equals(sortedNames);
 	}
 
@@ -686,8 +683,6 @@ public class BasePage {
 		Collections.reverse(sortedNames);
 		return names.equals(sortedNames);
 	}
-
-
 
 	WebDriver driver;
 	private Alert alert;

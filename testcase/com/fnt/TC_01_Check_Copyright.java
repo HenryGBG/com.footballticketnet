@@ -53,14 +53,14 @@ public class TC_01_Check_Copyright extends BaseTest {
 		homePage = PageGenerateManager.getHomePage(driver);
 
 		homePage.clickToSelectCountry();
-//		homePage.selectCountryFrench();
+		homePage.selectCountryFrench();
 //		homePage.selectCountryGerman();
 //		homePage.selectCountryItalian();
 //		homePage.selectCountryDutch();
 //		homePage.selectCountryFinnish();
 //		homePage.selectCountrySwedish();
 //		homePage.selectCountryDanish();
-		homePage.selectCountrySpanish();
+//		homePage.selectCountrySpanish();
 
 		homePage.scrollToBottomPage(driver);
 

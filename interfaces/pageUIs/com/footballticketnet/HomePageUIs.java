@@ -21,5 +21,11 @@ public class HomePageUIs {
 	public static final String SELECTED_COUNTRY_SWEDISH = "xpath=//dl[@id='country-select']//span[text()='Swedish']";
 	public static final String SELECTED_COUNTRY_DANISH = "xpath=//dl[@id='country-select']//span[text()='Danish']";
 	public static final String SELECTED_COUNTRY_SPANNISH = "xpath=//dl[@id='country-select']//span[text()='Spanish']";
+	public static final String SEARCH_TEXTBOX_XPATH = "xpath=//input[@placeholder='Search']";
+	public static final String SEARCH_RESULT_ITEM = "xpath=//div[@class='result_line result_event']//span[@class='marked_keyword' and text()='%s']";
+	public static final String CHOOSE_CATEGORY_ITEM = "xpath=//div[@class='nice-select open']/ul/li[@class='option' and text()='%s']";
+	public static final String CHOOSE_CATEGORY_DROPDOWN_XPATH = "xpath=//div[@id='exchange_category_filter']//div[@class='nice-select']";
+	public static final String RESET_BUTTON = "xpath=//input[@class='reset_category green_btn desktop-only']";
+	public static final String CATEGORY_LIST_ITEMS = "xpath=//div[@class='common_stand category category-border']/strong";
 
 }
