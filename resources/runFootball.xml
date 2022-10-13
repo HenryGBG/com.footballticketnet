@@ -1,0 +1,17 @@
+<suite parallel="false" name="Football Ticket Net">
+
+	<listeners>
+		<listener class-name="reportConfig.ExtentTestListener" />
+	</listeners>
+
+	<parameter name="url" value="https://www.footballticketnet.com/" />
+
+
+	<test name="Run on CHROME">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.fnt.TC_01_Check_Copyright" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
