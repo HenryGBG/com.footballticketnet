@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 
 import commons.BaseTest;
+import commons.GlobalBaseUI;
 import commons.GlobalConstants;
 import commons.PageGenerateManager;
 import pageObjects.BlogPageObject;
@@ -61,7 +62,7 @@ public class TC_01_Regression_Test_VerifyPageDisplay extends BaseTest {
 
 		ExtentTestManager.getTest().log(Status.INFO,
 				"Voucher - Step 02: Verify the title 'BUY A PRINTABLE E-GIFT CARD' displayed");
-		Assert.assertEquals(voucherPage.getVoucherTitleHeading(), VoucherPageUI.COPYRIGHT_CHECKING.toUpperCase());
+		Assert.assertEquals(voucherPage.getVoucherTitleHeading(), GlobalBaseUI.COPYRIGHT_CHECKING.toUpperCase());
 	}
 
 	@Test

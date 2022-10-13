@@ -2,35 +2,19 @@ package com.fnt;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.Status;
-
 import commons.BaseTest;
-import commons.GlobalBaseUI;
 import commons.PageGenerateManager;
-import pageObjects.BlogPageObject;
-import pageObjects.ContactUsPageObject;
-import pageObjects.FAQsPageObject;
-import pageObjects.GlobalPageObject;
 import pageObjects.HomePageObject;
-import pageObjects.InternationalPageObject;
-import pageObjects.MostPopularPageObject;
-import pageObjects.StadiumTourPageObject;
-import pageObjects.TeamsPageObject;
-import pageObjects.TermConditionPageObject;
-import pageObjects.TournamentsPageObject;
-import pageObjects.VoucherPageObject;
 import pageUIs.com.footballticketnet.HomePageUIs;
 import reportConfig.ExtentTestManager;
 
@@ -51,7 +35,7 @@ public class testScript extends BaseTest {
 //		homePage.clickToSelectCountry();
 //		homePage.selectCountryFrench();
 
-		sleepInSecond(5);
+//		sleepInSecond(5);
 
 		homePage.searchUpcomingMatch("Paris");
 		homePage.clickOnSearchResult("Paris");
