@@ -23,5 +23,10 @@ public class CheckoutPageUI {
 	public static final String EXPIRE_MONTH_XPATH = "xpath=//select[@id='credit_card_exp_month']";;
 	public static final String EXPIRE_YEAR_XPATH = "xpath=//select[@id='credit_card_exp_year']";
 	public static final String CARD_VERIFICATION_NUMBER_XPATH = "xpath=//input[@id='credit_card_verification_number']";
+	public static final String FIRST_NAME_LABEL = "Henry";
+	public static final String LAST_NAME_LABEL = "Nguyen";
+	public static final String EMAIL_LABEL = "henry.footballticket@gmail.com";
+	public static final String PHONE_LABEL = "0932153486";
+	public static final String VOUCHER_CODE = "voucher123456";
 
 }

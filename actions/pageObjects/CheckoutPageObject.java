@@ -13,11 +13,44 @@ public class CheckoutPageObject extends BasePage {
 		this.driver = driver;
 	}
 
-	public void inputBillingInfomationBillingAddressOnCheckoutPage() {
+	public void inputBillingAddress() {
+		selectCountryInBillingDetails("Vietnam");
 		inputToTextboxByID(driver, "billing_city", CheckoutPageUI.SELECTED_CITY_TOWN_LABEL);
 		inputToTextboxByID(driver, "billing_postal_code", CheckoutPageUI.SELECTED_POSTCODE);
 		inputToTextboxByID(driver, "billing_address", CheckoutPageUI.SELECTED_SELECTED_ADDRESS_LABEL);
 		clickToCheckboxRequired();
+	}
+
+	public void inputBillingDetail() {
+		inputToFirstName();
+		inputToLastName();
+		inputToEmail();
+		inputToPhone();
+		inputToSepecialRequest();
+	}
+
+	public void inputToFirstName() {
+		inputToTextboxByID(driver, "billing_first_name", CheckoutPageUI.FIRST_NAME_LABEL);
+	}
+
+	public void inputToLastName() {
+		inputToTextboxByID(driver, "billing_last_name", CheckoutPageUI.LAST_NAME_LABEL);
+	}
+
+	public void inputToEmail() {
+		inputToTextboxByID(driver, "billing_email", CheckoutPageUI.EMAIL_LABEL);
+	}
+
+	public void inputToPhone() {
+		inputToTextboxByID(driver, "billing_phone_number", CheckoutPageUI.PHONE_LABEL);
+	}
+
+	public void inputToVoucherCode() {
+		inputToTextboxByID(driver, "voucher_code", CheckoutPageUI.VOUCHER_CODE);
+	}
+
+	public void inputToSepecialRequest() {
+		inputToTextboxByTextArea(driver, "special_request", CheckoutPageUI.SPECIAL_REQUEST_TEXTAREA);
 	}
 
 	private void clickToCheckboxRequired() {
@@ -51,15 +84,11 @@ public class CheckoutPageObject extends BasePage {
 
 	}
 
-	public void chooseThePaymentMethod() {
-		clickToThePaymentMethod("GBP");
-	}
-
-	public void clickToThePaymentMethod(String currencyInPayment) {
+	public void chooseThePaymentMethod(String currencyInPayment) {
 		clickToElementByJS(driver, CheckoutPageUI.CHOOSE_PAYMENT_METHOD_XPATH, currencyInPayment);
 	}
 
-	public void inputBillingDetailsPaymentMethod() {
+	public void inputPaymentMethod() {
 		selectCardTypeInPayment(VoucherPageUI.CARD_TYPE_LABEL);
 		inputCardNumber(VoucherPageUI.CARD_NUMBER_LABEL);
 		inputCardHolderName(VoucherPageUI.CARD_HOLDER_NAME_LABEL);
@@ -105,4 +134,5 @@ public class CheckoutPageObject extends BasePage {
 		waitForElementVisible(driver, CheckoutPageUI.CARD_TYPE_XPATH);
 		selectItemInDefaultDropdown(driver, CheckoutPageUI.CARD_TYPE_XPATH, cardTypeLabel);
 	}
+
 }

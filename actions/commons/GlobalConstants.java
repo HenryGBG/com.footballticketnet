@@ -17,6 +17,7 @@ public class GlobalConstants {
 	public static final String DYNAMIC_RADIO_BUTTON_BY_VALUE = "xpath=//label[text()='%s']/preceding-sibling::input";
 	public static final String DYNAMIC_CHECKBOX_BY_LABEL = "xpath=//label[contains(text(),'%s')]/following-sibling::input";
 	public static final String COPY_RIGHT_LABEL_XPATH = "xpath=//div[@class='copy_footer']//div[@class='copy']";
-	public static final String TEAM_INFO_LABEL = "Paris Saint-Germain vs Olympique Marseille";
+	public static final String TEAM_INFO_LABEL = "Bayern Munich vs Borussia Dortmund";
 	public static final String CHOOSE_CATEGORY_BY_LABEL = "Best Available";
+	public static final String CREDIT_CARD_IN_USD = "USD";
 }

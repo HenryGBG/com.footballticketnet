@@ -14,15 +14,17 @@ import com.aventstack.extentreports.Status;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import commons.PageGenerateManager;
+import pageObjects.CheckoutPageObject;
 import pageObjects.HomePageObject;
 import pageObjects.VoucherPageObject;
 import pageUIs.com.footballticketnet.VoucherPageUI;
 import reportConfig.ExtentTestManager;
 
-public class TC_04_BookingAMatchOnSlideWallpaper extends BaseTest {
+public class TC_04_BookingUpcomingFootballEvents extends BaseTest {
 	WebDriver driver;
 	HomePageObject homePage;
 	VoucherPageObject voucherPage;
+	CheckoutPageObject checkoutPage;
 
 	@Parameters({ "browser", "url" })
 	@BeforeClass
@@ -32,7 +34,7 @@ public class TC_04_BookingAMatchOnSlideWallpaper extends BaseTest {
 	}
 
 	@Test
-	public void Voucher_TC001_Buy_With_Empty_Data(Method method) {
+	public void TC_01(Method method) {
 		ExtentTestManager.startTest(method.getName(), "Buy a voucher");
 
 		ExtentTestManager.getTest().log(Status.INFO, "Voucher - Step 00: Navigate to 'Homepage'");
@@ -42,7 +44,12 @@ public class TC_04_BookingAMatchOnSlideWallpaper extends BaseTest {
 		homePage.clickToBuyNowOnEvent(GlobalConstants.TEAM_INFO_LABEL);
 		homePage.clickToChooseCategoryDropdown();
 		homePage.chooseCategoryByItem(GlobalConstants.CHOOSE_CATEGORY_BY_LABEL);
-		homePage.clickToBuyNowOnCategoryPage();
+		checkoutPage = homePage.clickToBuyNowOnCategoryPageWithPrice("295.00");
+		checkoutPage.inputBillingAddress();
+		checkoutPage.inputBillingDetail();
+		checkoutPage.clickToNextButton();
+		checkoutPage.chooseThePaymentMethod(GlobalConstants.CREDIT_CARD_IN_USD);
+		checkoutPage.inputPaymentMethod();
 
 //		homePage.chooseTheTicketWithTheHighestPrice();
 

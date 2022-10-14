@@ -7,7 +7,7 @@
 	<test name="Run on CHROME">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.footballticketnet.regression.TC_04_BookingAMatchOnSlideWallpaper" />
+			<class name="com.footballticketnet.regression.TC_04_BookingUpcomingFootballEvents" />
 		</classes>
 	</test>
 

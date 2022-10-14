@@ -55,7 +55,7 @@ public class TC_03_Voucher_BuyValidVoucherTestcase extends BaseTest {
 		checkoutPage = voucherPage.clickBuyNowButton();
 
 		ExtentTestManager.getTest().log(Status.INFO, "Voucher - Step 06: Input Address billing information");
-		checkoutPage.inputBillingInfomationBillingAddressOnCheckoutPage();
+		checkoutPage.inputBillingAddress();
 
 		ExtentTestManager.getTest().log(Status.INFO, "Voucher - Step 07: Input Details billing information");
 		checkoutPage.inputBillingInfomationDetailsOnCheckoutPage();
@@ -64,12 +64,10 @@ public class TC_03_Voucher_BuyValidVoucherTestcase extends BaseTest {
 		checkoutPage.clickToNextButton();
 
 		ExtentTestManager.getTest().log(Status.INFO, "Voucher - Step 09: Choose the 'Payment' method");
-		checkoutPage.chooseThePaymentMethod();
+		checkoutPage.chooseThePaymentMethod(GlobalConstants.CREDIT_CARD_IN_USD);
 
 		ExtentTestManager.getTest().log(Status.INFO, "Voucher - Step 10: Input valid data into 'Payment' form");
-		checkoutPage.inputBillingDetailsPaymentMethod();
-		
-		
+		checkoutPage.inputPaymentMethod();
 
 	}
 

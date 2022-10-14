@@ -28,6 +28,7 @@ public class HomePageUIs {
 	public static final String RESET_BUTTON = "xpath=//input[@class='reset_category green_btn desktop-only']";
 	public static final String CATEGORY_LIST_ITEMS = "xpath=//div[@class='common_stand category category-border']/strong";
 	public static final String TEAM_INFO = "xpath=//p[text()='%s ']/ancestor::div/div[@class='d_inline team_ticket']";
-	public static final String BUY_NOW_BUTTON_XPATH = "xpath=//div[@class='common_stand prive' and text()=' €160.00 ']/parent::div//input[@class=' green_btn desktop-only']";
+	public static final String BUY_NOW_BUTTON_XPATH = "xpath=//div[@class='stand_Sprice desktop  ']/div/div[@class='common_stand prive' and text()=' €%s ']/following-sibling::div/input[@value='Buy Now']";
+	public static final String NOTIFICATION_ACCEPT_BUTTON_XPATH = "xpath=//div[@class='our_adv_pop']//button[@class='single_seats_popup']";
 
 }
