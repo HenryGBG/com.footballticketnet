@@ -1,4 +1,4 @@
-package com.footballticketnet.voucher;
+package com.footballticketnet.regression;
 
 import java.lang.reflect.Method;
 
@@ -19,7 +19,7 @@ import pageObjects.VoucherPageObject;
 import pageUIs.com.footballticketnet.VoucherPageUI;
 import reportConfig.ExtentTestManager;
 
-public class TC_04_Voucher_BookingAMatchOnSlideWallpaper extends BaseTest {
+public class TC_04_BookingAMatchOnSlideWallpaper extends BaseTest {
 	WebDriver driver;
 	HomePageObject homePage;
 	VoucherPageObject voucherPage;
@@ -39,8 +39,11 @@ public class TC_04_Voucher_BookingAMatchOnSlideWallpaper extends BaseTest {
 		homePage = PageGenerateManager.getHomePage(driver);
 
 		ExtentTestManager.getTest().log(Status.INFO, "Voucher - Step 01: Click on 'Buy Now' on slide wallpaper");
-//		homePage.clickToBuyNowOnSlideWallpaper();
-//		homePage.getListCategoryOfFootballMatch();
+		homePage.clickToBuyNowOnEvent(GlobalConstants.TEAM_INFO_LABEL);
+		homePage.clickToChooseCategoryDropdown();
+		homePage.chooseCategoryByItem(GlobalConstants.CHOOSE_CATEGORY_BY_LABEL);
+		homePage.clickToBuyNowOnCategoryPage();
+
 //		homePage.chooseTheTicketWithTheHighestPrice();
 
 	}

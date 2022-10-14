@@ -54,5 +54,6 @@ public class VoucherPageUI {
 	public static final String EXPIRE_MONTH_YEAR_LABEL = null;
 	public static final String CARD_VERIFICATION_NUMBER_LABEL = "111";
 	public static final String VOUCHER_TITLE_XPATH = "xpath=//div[@class='voucher_title']/div[@class='ticket_head']/p";
+	public static final String VOUCHER_TITLE_IN_ENGLISH = "BUY A PRINTABLE E-GIFT CARD";
 
 }

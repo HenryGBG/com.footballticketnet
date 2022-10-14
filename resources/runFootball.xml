@@ -1,16 +1,13 @@
-<suite parallel="false" name="Football Ticket Net">
-
+<suite name="Football Ticket Net" thread-count="5" parallel="classes">
 	<listeners>
 		<listener class-name="reportConfig.ExtentTestListener" />
 	</listeners>
-
-	<parameter name="url" value="https://www.footballticketnet.fr/" />
-
+	<parameter name="url" value="https://www.footballticketnet.com/" />
 
 	<test name="Run on CHROME">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.fnt.testScript" />
+			<class name="com.footballticketnet.regression.TC_04_BookingAMatchOnSlideWallpaper" />
 		</classes>
 	</test>
 

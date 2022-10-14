@@ -149,4 +149,19 @@ public class HomePageObject extends BasePage {
 		clickToElement(driver, HomePageUIs.RESET_BUTTON);
 	}
 
+	public void clickToBuyNowOnEvent(String teamInfo) {
+		waitForElementVisible(driver, HomePageUIs.TEAM_INFO, teamInfo);
+		clickToElement(driver, HomePageUIs.TEAM_INFO, teamInfo);
+	}
+
+	public void clickToBuyNowOnCategoryPage() {
+		waitForElementVisible(driver, HomePageUIs.BUY_NOW_BUTTON_XPATH);
+		clickToElement(driver, HomePageUIs.BUY_NOW_BUTTON_XPATH);
+	}
+
+	public void clickToChooseCategoryDropdown() {
+		waitForElementVisible(driver, HomePageUIs.CHOOSE_CATEGORY_DROPDOWN_XPATH);
+		clickToElement(driver, HomePageUIs.CHOOSE_CATEGORY_DROPDOWN_XPATH);
+	}
+
 }

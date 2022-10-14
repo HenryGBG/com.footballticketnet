@@ -53,7 +53,7 @@ public class TC_01_Check_Copyright extends BaseTest {
 		homePage = PageGenerateManager.getHomePage(driver);
 
 		homePage.clickToSelectCountry();
-		homePage.selectCountryFrench();
+//		homePage.selectCountryFrench();
 //		homePage.selectCountryGerman();
 //		homePage.selectCountryItalian();
 //		homePage.selectCountryDutch();
@@ -75,7 +75,7 @@ public class TC_01_Check_Copyright extends BaseTest {
 		homePage = PageGenerateManager.getHomePage(driver);
 
 		voucherPage = homePage.clickToVoucherLink();
-		voucherPage.scrollToBottomPage(driver);
+//		voucherPage.scrollToBottomPage(driver);
 
 		Assert.assertEquals(voucherPage.checkCopyRightFNT(), GlobalBaseUI.COPYRIGHT_CHECKING);
 	}
@@ -88,7 +88,7 @@ public class TC_01_Check_Copyright extends BaseTest {
 
 		ExtentTestManager.getTest().log(Status.INFO, "Blog - Step 01: Click to 'Blog' link");
 		blogPage = homePage.clickBlogLinkOnHeader();
-		blogPage.scrollToBottomPage(driver);
+//		blogPage.scrollToBottomPage(driver);
 
 		Assert.assertEquals(blogPage.checkCopyRightFNT(), GlobalBaseUI.COPYRIGHT_CHECKING);
 	}
@@ -100,7 +100,7 @@ public class TC_01_Check_Copyright extends BaseTest {
 		homePage = PageGenerateManager.getHomePage(driver);
 
 		contactPage = homePage.clickcToContactLinkOnHeader();
-		contactPage.scrollToBottomPage(driver);
+//		contactPage.scrollToBottomPage(driver);
 
 		Assert.assertEquals(contactPage.checkCopyRightFNT(), GlobalBaseUI.COPYRIGHT_CHECKING);
 	}
@@ -140,7 +140,7 @@ public class TC_01_Check_Copyright extends BaseTest {
 		ExtentTestManager.getTest().log(Status.INFO, "Teams - Step 02: Click to 'Teams' menu");
 		teamsPage = homePage.clickToTeamsMenu();
 
-		teamsPage.scrollToBottomPage(driver);
+//		teamsPage.scrollToBottomPage(driver);
 		Assert.assertEquals(teamsPage.checkCopyRightFNT(), GlobalBaseUI.COPYRIGHT_CHECKING);
 	}
 

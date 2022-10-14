@@ -1,4 +1,4 @@
-package com.footballticketnet.voucher;
+package com.footballticketnet.regression;
 
 import java.lang.reflect.Method;
 

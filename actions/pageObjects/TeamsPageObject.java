@@ -21,7 +21,7 @@ public class TeamsPageObject extends BasePage {
 
 	public String checkCopyRightFNT() {
 		waitForElementVisible(driver, GlobalConstants.COPY_RIGHT_LABEL_XPATH);
-		highlightElementByJS(driver, GlobalConstants.COPY_RIGHT_LABEL_XPATH);
+//		highlightElementByJS(driver, GlobalConstants.COPY_RIGHT_LABEL_XPATH);
 		return getElementText(driver, GlobalConstants.COPY_RIGHT_LABEL_XPATH);
 	}
 }
