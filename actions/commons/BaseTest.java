@@ -40,7 +40,7 @@ public class BaseTest {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browserName.equals("h_chrome")) {
-			WebDriverManager.firefoxdriver().setup();
+			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
@@ -67,7 +67,7 @@ public class BaseTest {
 
 	@AfterClass(alwaysRun = true)
 	public void afterClass() {
-//		driver.quit();
+		driver.quit();
 	}
 
 	public void sleepInSecond(long timeInSecond) {

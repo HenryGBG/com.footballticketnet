@@ -44,7 +44,7 @@ public class TC_04_BookingUpcomingFootballEvents extends BaseTest {
 		homePage.clickToBuyNowOnEvent(GlobalConstants.TEAM_INFO_LABEL);
 		homePage.clickToChooseCategoryDropdown();
 		homePage.chooseCategoryByItem(GlobalConstants.CHOOSE_CATEGORY_BY_LABEL);
-		checkoutPage = homePage.clickToBuyNowOnCategoryPageWithPrice("295.00");
+		checkoutPage = homePage.clickToBuyNowOnCategoryPageWithPrice("254.00");
 		checkoutPage.inputBillingAddress();
 		checkoutPage.inputBillingDetail();
 		checkoutPage.clickToNextButton();
