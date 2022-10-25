@@ -20,7 +20,7 @@ import pageObjects.VoucherPageObject;
 import pageUIs.com.footballticketnet.VoucherPageUI;
 import reportConfig.ExtentTestManager;
 
-public class TC_04_BookingUpcomingFootballEvents extends BaseTest {
+public class TC_04_BookNewTicket extends BaseTest {
 	WebDriver driver;
 	HomePageObject homePage;
 	VoucherPageObject voucherPage;

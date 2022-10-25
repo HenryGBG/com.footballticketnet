@@ -28,5 +28,6 @@ public class CheckoutPageUI {
 	public static final String EMAIL_LABEL = "henry.footballticket@gmail.com";
 	public static final String PHONE_LABEL = "0932153486";
 	public static final String VOUCHER_CODE = "voucher123456";
+	public static final String CATEGORY_NAME_CHECKOUT_PAGE_LABEL = "css=#category_name";
 
 }

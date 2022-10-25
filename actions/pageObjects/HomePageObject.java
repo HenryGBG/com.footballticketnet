@@ -151,13 +151,19 @@ public class HomePageObject extends BasePage {
 
 	public void clickToBuyNowOnEvent(String teamInfo) {
 		waitForElementVisible(driver, HomePageUIs.TEAM_INFO, teamInfo);
-
 		clickToElement(driver, HomePageUIs.TEAM_INFO, teamInfo);
 	}
 
 	public CheckoutPageObject clickToBuyNowOnCategoryPageWithPrice(String priceTicket) {
 		waitForElementVisible(driver, HomePageUIs.BUY_NOW_BUTTON_XPATH, priceTicket);
 		clickToElement(driver, HomePageUIs.BUY_NOW_BUTTON_XPATH, priceTicket);
+		acceptNotificationIApprove();
+		return new CheckoutPageObject(driver);
+	}
+
+	public CheckoutPageObject clickToBuyNowOnCategoryPageWithOutPrice() {
+		waitForElementVisible(driver, HomePageUIs.BUY_NOW_BUTTON_WITH_OUT_PRICE_XPATH);
+		clickToElement(driver, HomePageUIs.BUY_NOW_BUTTON_WITH_OUT_PRICE_XPATH);
 		acceptNotificationIApprove();
 		return new CheckoutPageObject(driver);
 	}

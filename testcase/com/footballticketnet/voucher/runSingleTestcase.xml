@@ -3,12 +3,12 @@
 		<listener class-name="reportConfig.ExtentTestListener" />
 	</listeners>
 
-	<parameter name="url" value="https://www.footballticketnet.com/" />
+	<parameter name="url" value="https://www.footballticketnet.com/champions-league/juventus-vs-paris-saint-germain" />
 
 	<test name="Run on CHROME">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.footballticketnet.regression.TC_05_Verify_Category" />
+			<class name="com.footballticketnet.voucher.fecthAllLinks" />
 		</classes>
 	</test>
 </suite> <!-- Suite -->

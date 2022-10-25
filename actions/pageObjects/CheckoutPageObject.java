@@ -135,4 +135,10 @@ public class CheckoutPageObject extends BasePage {
 		selectItemInDefaultDropdown(driver, CheckoutPageUI.CARD_TYPE_XPATH, cardTypeLabel);
 	}
 
+	public String getCategoryNameInCheckoutPage() {
+		waitForElementVisible(driver, CheckoutPageUI.CATEGORY_NAME_CHECKOUT_PAGE_LABEL);
+		System.out.println(getElementText(driver, CheckoutPageUI.CATEGORY_NAME_CHECKOUT_PAGE_LABEL));
+		return getElementText(driver, CheckoutPageUI.CATEGORY_NAME_CHECKOUT_PAGE_LABEL);
+	}
+
 }
